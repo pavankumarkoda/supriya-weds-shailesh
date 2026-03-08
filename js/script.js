@@ -27,7 +27,7 @@ function pauseAudio(event) {
 }
 
 // Countdown Timer
-var countDownDate = new Date("February 19, 2026 23:33:00").getTime();
+var countDownDate = new Date("March 12, 2026 10:55:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
