@@ -142,3 +142,52 @@ document.addEventListener("DOMContentLoaded", function () {
   const revealElements = document.querySelectorAll(".reveal");
   revealElements.forEach((el) => observer.observe(el));
 });
+const track = document.getElementById("galleryTrack");
+const slides = document.querySelectorAll(".gallery-slide");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+
+function getSlideWidth(){
+  return slides[0].offsetWidth + 15;
+}
+
+function updateSlide(){
+  track.style.transform =
+    `translateX(-${index * getSlideWidth()}px)`;
+}
+
+/* next */
+
+nextBtn.onclick = () => {
+  index++;
+  updateSlide();
+};
+
+/* prev */
+
+prevBtn.onclick = () => {
+  if(index>0){
+    index--;
+  }
+  updateSlide();
+};
+
+/* auto scroll */
+
+setInterval(()=>{
+  index++;
+  updateSlide();
+
+  if(index >= slides.length - 3){
+    setTimeout(()=>{
+      track.style.transition="none";
+      index = 0;
+      updateSlide();
+      track.offsetHeight;
+      track.style.transition="transform 0.6s ease";
+    },600);
+  }
+
+},3000);
