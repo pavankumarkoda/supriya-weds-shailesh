@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <link rel="shortcut icon" href="favicon.png" type="image/png"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <meta name="author" content="Pavan Kumar">
+    <meta name="email" content="pavankumarkoda007@gmail.com">
+    <meta name="copyright" content="Pavan Koda 2025" />
+
+    <title>Praneeth ❤️ Bhavya | Wedding Invitation</title>
+
+    <!-- Open Graph Preview -->
+    <meta property="og:title" content="Praneeth ❤️ Bhavya | Wedding Invitation">
+    <meta property="og:description" content="Join us on 19 February 2026 at Bhadrachalam Temple">
+    <meta property="og:image" content="https://praneeth-weds-bhavya.weddinginvitation.store/assets/img/preview.png">
+    <meta property="og:url" content="https://praneeth-weds-bhavya.weddinginvitation.store/">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <style>
+        /* Enhanced Colorful Styles */
+        body {
+            background: linear-gradient(-45deg, #fff0f5, #e3f2fd, #fce4ec, #f3e5f5);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .title h1 {
+            color: #d81b60;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .title h2 {
+            color: #8e24aa;
+        }
+        .title h3 {
+            color: #5e35b1;
+        }
+        .date { color: #c2185b; font-weight: bold; }
+        .place { color: #00796b; font-weight: bold; }
+
+        /* Countdown Timer Blocks */
+        #time {
+            background: linear-gradient(-45deg, #fff0f5, #e3f2fd, #fce4ec, #f3e5f5);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        #time .container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            perspective: 600px;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: auto;
+        }
+        .card {
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-family: 'Arvo', serif;
+        }
+        #days-val { background: #ffebee; color: #b71c1c; }
+        #hours-val { background: #f3e5f5; color: #4a148c; }
+        #minutes-val { background: #fff3e0; color: #e65100; }
+        #seconds-val { background: #e3f2fd; color: #0d47a1; }
+        .label {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        /* Opening Animation */
+        .flip-animate {
+            transform-origin: top center;
+            animation: calendarOpen 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes calendarOpen {
+            from {
+                transform: rotateX(90deg);
+                opacity: 0.5;
+            }
+            to {
+                transform: rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        /* Text & Element Animations */
+        .animate-text {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .pop-in {
+            opacity: 0;
+            animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Floating decoration */
+        .top-right-decoration, .top-left-decoration {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Shimmer Text Effect */
+        .shimmer-text {
+            background: linear-gradient(90deg, #d81b60 0%, #ff80ab 50%, #d81b60 100%);
+            background-size: 200% auto;
+            color: #d81b60;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+            display: inline-block;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+
+        /* Buttons */
+        .venue {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .venue:hover {
+            transform: translateY(-3px);
+        }
+        .pulse-btn {
+            animation: pulse-shadow 2s infinite;
+        }
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 65, 108, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 65, 108, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 65, 108, 0); }
+        }
+
+        /* Mobile Layout for Timer */
+        @media (max-width: 600px) {
+            #time .container {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+      </style>
+   </head>
+   <body>
+      <div class="Gowtham-falling"></div>
+      <img src="https://i.postimg.cc/mDD9D8Zd/Untitled-design-1-removebg-preview.png" alt="image-top-right" class="top-right-decoration">
+      <img src="https://i.postimg.cc/P5X5TN5y/Untitled-design-removebg-preview-1.png" alt="image-top-left" class="top-left-decoration" > 
+      <section id="media"></section>
+      <div class="wrap">
+        
+       
+        <div class="title">
+          <p class="animate-text delay-1"><b class="shimmer-text">Marriage INVITATION</b></p>
+            <h1 class="pop-in delay-2">Praneeth Kumar</h1>
+            <h2 class="animate-text delay-3">&</h2>
+            <h1 class="pop-in delay-4">Bhavya</h1>
+            <h3 class="animate-text delay-5">Are getting Married</h3>
+            <p>
+               On <span class="date"> 19/02/2026 </span>, <br>
+               Sumuhurtham: 11:33 PM <br>
+               at <span class="place">Sri Sita Ramachandraswamy Temple (Bhadrachalam)</span>            
+            </p>
+            <div class="body2">
+            <svg width="50" height="50" viewBox="0 0 200 200">
+               <g transform="translate(100 100)">
+                 <path transform="translate(-50 -50)" fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+                 <animateTransform 
+                     attributeName="transform" 
+                     type="scale" 
+                     values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+                     dur="1s" 
+                     repeatCount="indefinite"
+                     additive="sum">      
+                 </animateTransform>
+             </g>
+           </svg>
+
+           <svg width="50" height="50" viewBox="0 0 200 200">
+            <g transform="translate(100 100)">
+              <path transform="translate(-50 -50)" fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+              <animateTransform 
+                  attributeName="transform" 
+                  type="scale" 
+                  values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+                  dur="1s" 
+                  repeatCount="indefinite"
+                  additive="sum">      
+              </animateTransform>
+          </g>
+        </svg>
+
+        <svg width="50" height="50" viewBox="0 0 200 200">
+         <g transform="translate(100 100)">
+           <path transform="translate(-50 -50)" fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+           <animateTransform 
+               attributeName="transform" 
+               type="scale" 
+               values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+               dur="1s" 
+               repeatCount="indefinite"
+               additive="sum">      
+           </animateTransform>
+       </g>
+     </svg>
+
+     <svg width="50" height="50" viewBox="0 0 200 200">
+      <g transform="translate(100 100)">
+        <path transform="translate(-50 -50)" fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+        <animateTransform 
+            attributeName="transform" 
+            type="scale" 
+            values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+            dur="1s" 
+            repeatCount="indefinite"
+            additive="sum">      
+        </animateTransform>
+    </g>
+  </svg>
+             </div>
+
+         </div>
+      </div>
+
+      <div class="actions reveal">
+        
+   
+    <video class="tile__video" playsinline muted loop controlslist="nodownload" style="max-width: 100%; height: auto;">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+      </div>
+      <br>   
+
+      <div id="time" class="reveal"></div>
+
+ <p class="happiness reveal">Join us in our happiness!<br><a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></p>
+     
+      <div class="tile__img reveal">
+         <img class="tile__img" src="./assets/img/ggg.gif" alt=""  />
+       </div>
+     
+      <p class="dance-med reveal">
+         Reception & Lunch
+      </p>
+      <p class="reveal" style="text-align: center; color: #564861; font-weight: bold;">
+         On 20th Feb 2026
+      </p>
+      <div class="actions reveal">
+        
+        <a href="assets\img\pranee weds bhavi invitation 😍.pdf" href="{{.}}" target="_blank">
+          <div class="venue pulse-btn">DOWNLOAD INVITATION CARD</div>
+        </a>
+
+        
+      </div>
+      <p class="footer reveal">
+         Can't wait to celebrate auspicious moment of our family with you! <br>
+         Ping me for queries: +91 9704159554
+         <span> 
+           <a href="https://api.whatsapp.com/send?phone=919704159554&text=Hello%20Praneeth%2C%20I%20have%20a%20query%20regarding%20the%20wedding"
+            target="_blank"
+            class="social-icon"
+            title="WhatsApp">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+         </span>
+      </p>
+      <div class="music">
+         <audio src="./assets/mp3/asd.mp3" id="my_audio" autoplay loop="loop"></audio> 
+      
+      </div>
+      
+
+      <p class="reveal">How do I get there?</p>
+
+      <div class="actions reveal" style="flex-wrap: wrap; justify-content: center; gap: 10px;">
+        
+        <a href="https://maps.app.goo.gl/hhzQyq2C9hATEEXFA" target="_blank">
+          <div class="venue pulse-btn">MARRIAGE VENUE</div>
+        </a>
+
+        <a href="https://maps.app.goo.gl/1ABsNsUWmSE9AnAK9" target="_blank">
+          <div class="venue pulse-btn">RECEPTION VENUE</div>
+        </a>
+     
+      </div>
+       <br>   
+      </div>
+       
+              <div class="wrapper reveal">
+               <section id="section1">
+                
+                 <div class="item">
+                  <img src="./assets/img/image1.jpg" alt="Describe Image"> 
+                </div>
+                 <div class="item">
+                 <img src="./assets/img/image2.png" alt="Describe Image">
+               </div>
+               <div class="item">
+                <img src="./assets/img/image3.jpg" alt="Describe Image">
+              </div>
+                 <div class="item">
+                 <img src="./assets/img/image4.jpg" alt="Describe Image">
+               </div>
+                 <div class="item">
+                 <img src="./assets/img/image5.jpg" alt="Describe Image">
+               </div>
+       
+               </section>
+             </div> 
+
+           </div>
+         </div>
+       
+       </div>
+       <p class="footer reveal">
+         I cordially invite you and your family to
+         my Marriage.
+         
+         I'd eagerly await your kind presence in auspicious occasion of my family.
+         </p>
+
+   
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+      <script  src="./js/script.js"></script>
+      <script src="/path/to/flickity.pkgd.min.js"></script>
+
+      
+    <script type="text/javascript">
+      function onYouTubeIframeAPIReady() {
+        var ctrlq = document.getElementById("youtube-player");
+        var player = new YT.Player('youtube-player', {
+          height: ctrlq.dataset.height,
+          width: ctrlq.dataset.width,
+          events: {
+            'onReady': function(e) {
+              e.target.cueVideoById({
+                videoId: ctrlq.dataset.video,
+                startSeconds: ctrlq.dataset.startseconds,
+                endSeconds: ctrlq.dataset.endseconds
+              });
+            }
+          }
+        });
+      }
+    </script>
+      
+   
+ 
+<br>
+<p class="footer reveal" style="font-size:12px; opacity:0.85;">
+  Crafted by <b>Pavan Koda</b> • Wedding websites, digital invites & many more •
+  <a href="https://weddinginvitation.store/" target="_blank" style="color:#ff6b6b; text-decoration:none; font-weight:bold;">
+    Order Now
+  </a> •
+  <a href="https://api.whatsapp.com/send?phone=919704147418" target="_blank">
+    <i class="fa fa-whatsapp" style="color:#25D366;"></i>
+  </a>
+</p>
+</body>
+
+</html>
